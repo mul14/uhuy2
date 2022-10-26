@@ -14,5 +14,5 @@ jobs:
         with:
           node-version: 16
         env:
-          KEY: "${{ secrets.APIKEY }}"
+          KEY: "${{ secrets.KEY }}"
       - run: node index.js
