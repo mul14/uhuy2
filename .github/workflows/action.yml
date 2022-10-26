@@ -15,4 +15,7 @@ jobs:
           node-version: 16
         env:
           KEY: "${{ secrets.KEY }}"
-      - run: node index.js
+      - run: |
+          touch .env
+          echo KEY="${{ secrets.KEY }}" >> .env
+          node index.js
